@@ -1,0 +1,30 @@
+<!DOCTYPE html>{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .checked{
+            color: red;
+        }
+        .btn {
+            background-color: inherit !important;
+            border: 0 !important;
+        }
+    </style>
+    <img src="{{ rate.img.url }}" alt="" width="500" height="400">
+    <a href="{% url 'blog:home' %}"><button>Next</button></a>
+    <button type="submit" class="fa fa-star fa-3x btn checked" id="first"></button>
+    <button type="submit" class="fa fa-star fa-3x btn checked" id="second"></button>
+    <button type="submit" class="fa fa-star fa-3x btn checked" id="third"></button>
+    <button type="submit" class="fa fa-star fa-3x" id="fourth"></button>
+    <button type="submit" class="fa fa-star fa-3x" id="fifth"></button>
+    <script src="{% static 'js/main.js' %}"></script>
+    durbek
+</body>
+</html>
