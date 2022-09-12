@@ -29,11 +29,13 @@
     <img src="{{ rate.img.url }}" alt="" width="500" height="400">
     <a href="{% url 'blog:home' %}"><button>Next</button></a>
     <form method="post" class="rate-form" id="{{ rate.id }}">
-        <button type="submit" class="fa fa-star fa-3x btn checked" id="first"></button>
-        <button type="submit" class="fa fa-star fa-3x btn checked" id="second"></button>
-        <button type="submit" class="fa fa-star fa-3x btn checked" id="third"></button>
+        <button type="submit" class="fa fa-star fa-3x btn " id="first"></button>
+        <button type="submit" class="fa fa-star fa-3x btn " id="second"></button>
+        <button type="submit" class="fa fa-star fa-3x btn " id="third"></button>
         <button type="submit" class="fa fa-star fa-3x" id="fourth"></button>
         <button type="submit" class="fa fa-star fa-3x" id="fifth"></button>
+        <br>
+        <div class="confirm-box"></div>
     </form>
     <script src="{% static 'js/main.js' %}"></script>
     
