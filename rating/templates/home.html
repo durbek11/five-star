@@ -20,7 +20,7 @@
             background: none;
         }
 
-        .btn {
+        .btns {
             background-color: inherit !important;
             border: 0 !important;
         }
@@ -28,16 +28,17 @@
     {% if rate %}
     <img src="{{ rate.img.url }}" alt="" width="500" height="400">
     <a href="{% url 'blog:home' %}"><button>Next</button></a>
+    
     <form method="post" class="rate-form" id="{{ rate.id }}">
-        <button type="submit" class="fa fa-star fa-3x btn " id="first"></button>
-        <button type="submit" class="fa fa-star fa-3x btn " id="second"></button>
-        <button type="submit" class="fa fa-star fa-3x btn " id="third"></button>
-        <button type="submit" class="fa fa-star fa-3x" id="fourth"></button>
-        <button type="submit" class="fa fa-star fa-3x" id="fifth"></button>
-        <br>
-        <div class="confirm-box"></div>
+        {% csrf_token %}
+        <button type="submit" class="fa fa-star fa-3x btns " id="first"></button>
+        <button type="submit" class="fa fa-star fa-3x btns " id="second"></button>
+        <button type="submit" class="fa fa-star fa-3x btns " id="third"></button>
+        <button type="submit" class="fa fa-star fa-3x btns" id="fourth"></button>
+        <button type="submit" class="fa fa-star fa-3x btns" id="fifth"></button>
+        <!-- <div class="confirm-box"></div> -->
     </form>
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'main.js' %}"></script>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     {% else %}
