@@ -28,7 +28,7 @@
     {% if rate %}
     <img src="{{ rate.img.url }}" alt="" width="500" height="400">
     <a href="{% url 'blog:home' %}"><button>Next</button></a>
-    
+
     <form method="post" class="rate-form" id="{{ rate.id }}">
         {% csrf_token %}
         <button type="submit" class="fa fa-star fa-3x btns " id="first"></button>
@@ -36,7 +36,9 @@
         <button type="submit" class="fa fa-star fa-3x btns " id="third"></button>
         <button type="submit" class="fa fa-star fa-3x btns" id="fourth"></button>
         <button type="submit" class="fa fa-star fa-3x btns" id="fifth"></button>
-        <!-- <div class="confirm-box"></div> -->
+
+        <br>
+        <div id="confirm-box"></div>
     </form>
     <script src="{% static 'main.js' %}"></script>
     

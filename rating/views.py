@@ -11,8 +11,9 @@ def home(request):
 
 def rate_img(request):
     if request.method == "POST":
-        el_vd = request.POST.get("el_vd")
-        rate = RateStars.objects.get(id=el_vd)
+        el_id = request.POST.get("el_id")
+        val = request.POST.get("val")
+        rate = RateStar.objects.get(id=el_id)
         rate.score = val
         rate.save()
         return JsonResponse({"success": "true", "score": val}, safe=False)
