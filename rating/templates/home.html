@@ -27,8 +27,11 @@
             bottom: 250px;
         }
         .fa-3x {
+            position: relative;
+            right: 12px;
             border: none;
             background: none;
+            margin-top: 30px;
         }
 
         .btns {
@@ -38,7 +41,7 @@
 
         .btn-11 {
             position: relative;
-            bottom: 100px;
+            bottom: 40px;
             border: none;
             border-radius: 50px;
             background: rgb(47, 33, 251);
@@ -100,6 +103,13 @@
                 opacity: 0;
             }
         }
+        .h3 {
+            position: relative;
+        }
+        .h1 {
+            position: relative;
+            bottom: 400px;
+        }
     </style>
     {% if rate %}
     <img src="{{ rate.img.url }}" alt="" width="500" height="400">
@@ -116,7 +126,7 @@
             <button type="submit" class="fa fa-star fa-3x btns " id="third"></button>
             <button type="submit" class="fa fa-star fa-3x btns" id="fourth"></button>
             <button type="submit" class="fa fa-star fa-3x btns" id="fifth"></button>
-
+            <h3 class="h3">{{ avg_rate.score__avg }}</h3>
             <br>
             <div id="confirm-box"></div>
         </form>
@@ -124,7 +134,8 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         {% else %}
-        <h1>Rate qilgani rasm qolmadi!</h1>
+        <h3 class="h3">{{ avg_rate.score__avg }}</h3>
+        <h1 class="h1">Rate qilgani rasm qolmadi!</h1>
         {% endif %}
 </body>
 
