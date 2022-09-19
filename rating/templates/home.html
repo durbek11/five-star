@@ -33,7 +33,6 @@
             background: none;
             margin-top: 30px;
         }
-
         .btns {
             background-color: inherit !important;
             border: 0 !important;
@@ -105,10 +104,16 @@
         }
         .h3 {
             position: relative;
+            top: 300px;
         }
         .h1 {
             position: relative;
-            bottom: 400px;
+            bottom: 100px;
+        }
+        .box {
+            display: flex;
+            position: relative;
+            bottom: 270px;
         }
     </style>
     {% if rate %}
@@ -136,6 +141,13 @@
         {% else %}
         <h3 class="h3">{{ avg_rate.score__avg }}</h3>
         <h1 class="h1">Rate qilgani rasm qolmadi!</h1>
+        <div class="box">
+            <button type="submit" class="fa fa-star fa-3x btns " id="first"></button>
+            <button type="submit" class="fa fa-star fa-3x btns " id="second"></button>
+            <button type="submit" class="fa fa-star fa-3x btns " id="third"></button>
+            <button type="submit" class="fa fa-star fa-3x btns" id="fourth"></button>
+            <button type="submit" class="fa fa-star fa-3x btns" id="fifth"></button>
+        </div>
         {% endif %}
 </body>
 
